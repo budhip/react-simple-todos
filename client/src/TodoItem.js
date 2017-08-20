@@ -6,7 +6,7 @@ class TodoItem extends Component {
       <li>
         <div className="todo-item">
           <span className="item-name">{this.props.item}</span>
-          <span className="item-delete" onClick={this.handleDelete}> x </span>
+          <button className="item-delete" type="button" onClick={this.handleDelete}><i className="fa fa-trash"></i></button>
         </div>
       </li>
     );

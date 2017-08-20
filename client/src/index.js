@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import './index.css';
-// import App from './App';
+import './css/index.css';
+import './css/todoItem.css';
 import TodoComponent from './TodoComponent';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<TodoComponent />, document.getElementById('root'));
+ReactDOM.render(<TodoComponent />, document.getElementById('todo-wrapper'));
 registerServiceWorker();
