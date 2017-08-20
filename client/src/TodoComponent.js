@@ -21,7 +21,7 @@ class TodoComponent extends Component {
 
     return (
       <div id="todo-list">
-        <p>The busiest people have the most leisure...</p>
+        <p>Daftar waktu luang...</p>
         <ul>{todos}</ul>
         <AddItem onAdd={this.onAdd} />
       </div>
@@ -43,6 +43,17 @@ class TodoComponent extends Component {
     this.setState({
       todos: updatedTodos
     });
+  }
+  //lifecycle functions
+  componentWillMount() {
+    console.log('componentWillMount');
+  }
+  componentDidMount() {
+    console.log('componentDidMount');
+    //any grabbing of external data
+  }
+  componentWillUpdate() {
+    console.log('componentWillUpdate');
   }
 }
 
