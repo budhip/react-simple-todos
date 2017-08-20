@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 // import './App.css';
+import TodoItem from './TodoItem';
 
 class TodoComponent extends Component {
   constructor() {
@@ -36,23 +37,5 @@ class TodoComponent extends Component {
     });
   }
 }
-
-var TodoItem = React.createClass({
-  render: function() {
-    return(
-      <li>
-        <div className="todo-item">
-          <span className="item-name">{this.props.item}</span>
-          <span className="item-delete" onClick={this.handleDelete}> x </span>
-        </div>
-      </li>
-    );
-  },
-
-  //custom functions
-  handleDelete() {
-    this.props.onDelete(this.props.item);
-  }
-});
 
 export default TodoComponent;
