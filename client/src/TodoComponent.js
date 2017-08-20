@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import TodoItem from './TodoItem';
+import AddItem from './addItem';
 
 class TodoComponent extends Component {
   constructor() {
     super();
     this.state = {
-      todos: ['wash up!', 'eat some cheese!', 'take a nap!', 'buy flowers!']
+      todos: ['Cuci Tangan!', 'Makan Keju!', 'Tidur!', 'Beli Bunga!']
     }
   }
 
@@ -22,6 +23,7 @@ class TodoComponent extends Component {
       <div id="todo-list">
         <p>The busiest people have the most leisure...</p>
         <ul>{todos}</ul>
+        <AddItem onAdd={this.onAdd} />
       </div>
     );
   }
@@ -31,6 +33,13 @@ class TodoComponent extends Component {
     var updatedTodos = this.state.todos.filter(function(val, index){
       return item !== val;
     });
+    this.setState({
+      todos: updatedTodos
+    });
+  }
+  onAdd = (item) => {
+    var updatedTodos = this.state.todos;
+    updatedTodos.push(item);
     this.setState({
       todos: updatedTodos
     });
