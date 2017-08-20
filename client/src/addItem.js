@@ -5,7 +5,7 @@ class addItem extends Component {
     return (
       <form id="add-todo" onSubmit={this.handleSubmit}>
         <input type="text" required ref="newItem"/>
-        <input type="submit" value="Tambah" />
+        <button type="submit"><i className="fa fa-plus"> Tambah</i></button>
       </form>
     );
   }
