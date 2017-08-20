@@ -14,7 +14,7 @@ class TodoComponent extends Component {
     var todos = this.state.todos;
     todos = todos.map(function(item, index){
       return (
-        <li>{item}</li>
+        <TodoItem item={item} key={index} />
       );
     });
 
@@ -26,5 +26,19 @@ class TodoComponent extends Component {
     );
   }
 }
+
+var TodoItem = React.createClass({
+  render() {
+    return(
+      <li>
+        <div className="todo-item">
+          <span className="item-name">
+            {this.props.item}
+          </span>
+        </div>
+      </li>
+    );
+  }
+});
 
 export default TodoComponent;
