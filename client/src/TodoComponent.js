@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
+import {Link} from 'react-router';
 import TodoItem from './TodoItem';
 import AddItem from './addItem';
 
@@ -21,6 +21,7 @@ class TodoComponent extends Component {
 
     return (
       <div id="todo-list">
+        <Link to={'/about'}>About</Link>
         <p>Daftar waktu luang...</p>
         <ul>{todos}</ul>
         <AddItem onAdd={this.onAdd} />
