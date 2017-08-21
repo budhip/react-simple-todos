@@ -22,7 +22,7 @@ class TodoComponent extends Component {
     return (
       <div id="todo-list">
         <Link to={'/about'}>About</Link>
-        <p>Daftar waktu luang...</p>
+        <p>Cuteman Todo List...</p>
         <ul>{todos}</ul>
         <AddItem onAdd={this.onAdd} />
       </div>
